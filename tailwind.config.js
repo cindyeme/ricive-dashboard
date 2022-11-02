@@ -32,16 +32,6 @@ module.exports = {
           600: "#101828",
         },
       },
-      fontSize: {
-        xxs: "0.81rem",
-        xs: "0.88rem",
-        sm: "1rem",
-        md: "1.5rem",
-        lg: "2.25rem",
-        xl: "3rem",
-        xxl: "4rem",
-        extra: "1.25rem",
-      },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
       },
@@ -56,33 +46,6 @@ module.exports = {
       },
       boxShadow: {
         "custom-1": "0px 1px 2px rgba(16, 24, 40, 0.05)",
-        "custom-2":
-          "0px -3.06122px 7.65306px 7.65306px rgba(0, 0, 0, 0.1), 0px 7.65306px 15.3061px 15.3061px rgba(0, 0, 0, 0.1)",
-      },
-      screens: {
-        xs: "320px",
-        // => @media (min-width: 320px) { ... }
-
-        sm: "576px",
-        // => @media (min-width: 576px) { ... }
-
-        md: "768px",
-        // => @media (min-width: 768px) { ... }
-
-        lg: "992px",
-        // => @media (min-width: 992px) { ... }
-
-        xl: "1024px",
-        // => @media (min-width: 1024px) { ... }
-
-        "2xl": "1200px",
-        // => @media (min-width: 1200px) { ... }
-
-        "3xl": "1440px",
-        // => @media (min-width: 1440px) { ... }
-
-        "4xl": "2560px",
-        // => @media (min-width: 2560px) { ... }
       },
     },
   },

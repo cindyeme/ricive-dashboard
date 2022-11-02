@@ -6,7 +6,7 @@ const Search = () => {
       <div className="flex items-center">
         <CiSearch className="text-[2rem] font-medium text-black-500" />
         <input
-          className="ring-0 outline-none block w-full p-3 text-base text-black-500 text-sm"
+          className="ring-0 outline-none block w-full p-3 text-base text-black-500"
           placeholder="Search"
         />
       </div>

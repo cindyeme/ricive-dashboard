@@ -6,6 +6,7 @@ import { RiHome6Line, RiCheckboxMultipleLine } from "react-icons/ri";
 import { HiOutlineChartBarSquare } from "react-icons/hi2";
 import { FiLayers, FiUsers, FiLifeBuoy, FiSettings } from "react-icons/fi";
 import { BiPieChartAlt2 } from "react-icons/bi";
+import { GrClose } from "react-icons/gr";
 
 import SideNavLinkGroup from "./SideNavLinkGroup";
 import { Logo } from "../../public";
@@ -24,6 +25,12 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
   const [sidebarExpanded, setSidebarExpanded] = useState(
     storedSidebarExpanded === null ? false : storedSidebarExpanded === "true"
   );
+  const [budget, setBudget] = useState(true);
+
+  // handle budget close
+  const handleBudgetOpen = () => {
+    setBudget(false);
+  };
 
   // close on click outside
   useEffect(() => {
@@ -74,7 +81,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
       <div
         id="sidebar"
         ref={sidebar}
-        className={`flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-screen overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-64 shrink-0 bg-white border-r p-4 transition-all duration-200 ease-in-out ${
+        className={`flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-screen overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-[280px] shrink-0 bg-white border-r p-4 transition-all duration-200 ease-in-out ${
           sidebarOpen ? "translate-x-0" : "-translate-x-64"
         }`}
       >
@@ -144,7 +151,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                               }`}
                             />
                             <span
-                              className={`text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
+                              className={` font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
                                 (pathname === "/home" ||
                                   pathname.includes("home")) &&
                                 "!text-primary-500"
@@ -193,7 +200,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                               }`}
                             />
                             <span
-                              className={`text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
+                              className={` font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
                                 (pathname === "/" ||
                                   pathname.includes("dashboard")) &&
                                 "!text-primary-500"
@@ -242,7 +249,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                               }`}
                             />
                             <span
-                              className={`text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
+                              className={` font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
                                 (pathname === "/projects" ||
                                   pathname.includes("projects")) &&
                                 "!text-primary-500"
@@ -291,7 +298,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                               }`}
                             />
                             <span
-                              className={`text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
+                              className={` font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
                                 (pathname === "/tasks" ||
                                   pathname.includes("tasks")) &&
                                 "!text-primary-500"
@@ -340,7 +347,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                               }`}
                             />
                             <span
-                              className={`text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
+                              className={` font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
                                 (pathname === "/reporting" ||
                                   pathname.includes("reporting")) &&
                                 "!text-primary-500"
@@ -389,7 +396,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                               }`}
                             />
                             <span
-                              className={`text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
+                              className={` font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
                                 (pathname === "/users" ||
                                   pathname.includes("users")) &&
                                 "!text-primary-500"
@@ -454,7 +461,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                               }`}
                             />
                             <span
-                              className={`text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
+                              className={` font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
                                 (pathname === "/support" ||
                                   pathname.includes("support")) &&
                                 "!text-primary-500"
@@ -503,7 +510,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                               }`}
                             />
                             <span
-                              className={`text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
+                              className={` font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
                                 (pathname === "/settings" ||
                                   pathname.includes("settings")) &&
                                 "!text-primary-500"
@@ -518,6 +525,46 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                   );
                 }}
               </SideNavLinkGroup>
+
+              {/* Monthly Budget */}
+              {budget && (
+                <li className="mt-4 bg-primary-50 p-4 rounded-[8px]">
+                  <div className="flex flex-col space-y-4">
+                    <div className="budget">
+                      <div className="flex justify-between items-center">
+                        <h6 className="text-black-600 font-medium">
+                          Monthly budget
+                        </h6>
+                        <button
+                          type="button"
+                          className="float-right"
+                          onClick={handleBudgetOpen}
+                        >
+                          <GrClose />
+                        </button>
+                      </div>
+                      <p className="text-black-500 text-sm mt-1">
+                        You’re at 80% of your budget.
+                      </p>
+                    </div>
+                    <div className="flex items-center space-x-4">
+                      <button
+                        type="button"
+                        onClick={handleBudgetOpen}
+                        className="text-black-500 font-medium"
+                      >
+                        Dismiss
+                      </button>
+                      <Link
+                        href="/upgrade"
+                        className="text-primary-400 font-medium"
+                      >
+                        Upgrade plan
+                      </Link>
+                    </div>
+                  </div>
+                </li>
+              )}
             </ul>
           </div>
         </div>

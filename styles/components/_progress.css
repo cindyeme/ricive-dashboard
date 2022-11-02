@@ -1,0 +1,7 @@
+.progress-inner {
+    @apply relative w-full overflow-hidden rounded-full bg-gray-100;
+}
+
+.progress-wrapper {
+    @apply w-full;
+}

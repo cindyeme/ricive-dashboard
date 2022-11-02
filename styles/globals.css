@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap');
+@import './components/index.css';
+@import './tailwind/index.css';
 
 @tailwind base;
 @tailwind components;
@@ -12,7 +14,10 @@ body {
   overflow-x: hidden; 
   font-family: 'Inter', sans-serif;
 }
-
+button:focus{
+  outline: none;
+  box-shadow: none;
+}
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
