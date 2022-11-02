@@ -5,10 +5,11 @@ import { useRouter } from "next/router";
 import { RiHome6Line, RiCheckboxMultipleLine } from "react-icons/ri";
 import { HiOutlineChartBarSquare } from "react-icons/hi2";
 import { FiLayers, FiUsers, FiLifeBuoy, FiSettings } from "react-icons/fi";
-import {BiPieChartAlt2} from 'react-icons/bi'
+import { BiPieChartAlt2 } from "react-icons/bi";
 
 import SideNavLinkGroup from "./SideNavLinkGroup";
 import { Logo } from "../../public";
+import Search from "./Search";
 
 function SideNav({ sidebarOpen, setSidebarOpen }) {
   const { pathname } = useRouter();
@@ -78,7 +79,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
         }`}
       >
         {/* Sidebar header */}
-        <div className="flex justify-between mb-10 pr-3 sm:px-2">
+        <div className="flex justify-between mt-4 mb-7 pr-3 sm:px-2">
           {/* Close button */}
           <button
             ref={trigger}
@@ -106,17 +107,9 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
         <div className="space-y-8">
           {/* Pages group */}
           <div>
-            <h3 className="text-xs uppercase text-slate-500 font-semibold pl-3">
-              <span
-                className="hidden lg:block lg:sidebar-expanded:hidden 2xl:hidden text-center w-6"
-                aria-hidden="true"
-              >
-                •••
-              </span>
-              {/* <span className="lg:hidden lg:sidebar-expanded:block 2xl:block">
-                Pages
-              </span> */}
-            </h3>
+            <div className="mb-4">
+              <Search />
+            </div>
             <ul className="mt-3">
               {/* Home */}
               <SideNavLinkGroup
@@ -151,7 +144,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                               }`}
                             />
                             <span
-                              className={`text-sm ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
+                              className={`text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
                                 (pathname === "/home" ||
                                   pathname.includes("home")) &&
                                 "!text-primary-500"
@@ -200,7 +193,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                               }`}
                             />
                             <span
-                              className={`text-sm ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
+                              className={`text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
                                 (pathname === "/" ||
                                   pathname.includes("dashboard")) &&
                                 "!text-primary-500"
@@ -249,7 +242,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                               }`}
                             />
                             <span
-                              className={`text-sm ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
+                              className={`text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
                                 (pathname === "/projects" ||
                                   pathname.includes("projects")) &&
                                 "!text-primary-500"
@@ -298,7 +291,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                               }`}
                             />
                             <span
-                              className={`text-sm ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
+                              className={`text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
                                 (pathname === "/tasks" ||
                                   pathname.includes("tasks")) &&
                                 "!text-primary-500"
@@ -347,7 +340,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                               }`}
                             />
                             <span
-                              className={`text-sm ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
+                              className={`text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
                                 (pathname === "/reporting" ||
                                   pathname.includes("reporting")) &&
                                 "!text-primary-500"
@@ -396,7 +389,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                               }`}
                             />
                             <span
-                              className={`text-sm ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
+                              className={`text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
                                 (pathname === "/users" ||
                                   pathname.includes("users")) &&
                                 "!text-primary-500"
@@ -461,7 +454,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                               }`}
                             />
                             <span
-                              className={`text-sm ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
+                              className={`text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
                                 (pathname === "/support" ||
                                   pathname.includes("support")) &&
                                 "!text-primary-500"
@@ -510,7 +503,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                               }`}
                             />
                             <span
-                              className={`text-sm ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
+                              className={`text-sm font-medium ml-3 lg:opacity-0 lg:sidebar-expanded:opacity-100 2xl:opacity-100 duration-200 text-black-500 ${
                                 (pathname === "/settings" ||
                                   pathname.includes("settings")) &&
                                 "!text-primary-500"

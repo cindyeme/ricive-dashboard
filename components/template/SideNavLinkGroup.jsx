@@ -9,7 +9,7 @@ function SideNavLinkGroup({ children, activeCondition }) {
 
   return (
     <li
-      className={`px-4 py-3 rounded-sm mb-2 last:mb-0 ${
+      className={`px-4 py-3 rounded-sm mb-0.5 last:mb-0 ${
         activeCondition && "bg-primary-100"
       }`}
     >

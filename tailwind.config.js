@@ -26,7 +26,7 @@ module.exports = {
           600: "#414243",
         },
         black: {
-          300: "#414243",
+          300: "#D0D5DD",
           400: "#667085",
           500: "#344054",
           600: "#101828",
@@ -55,8 +55,7 @@ module.exports = {
         black: 900,
       },
       boxShadow: {
-        "custom-1":
-          "-4px -4px 2px rgba(232, 232, 232, 0.25), 4px 4px 2px rgba(232, 232, 232, 0.25)",
+        "custom-1": "0px 1px 2px rgba(16, 24, 40, 0.05)",
         "custom-2":
           "0px -3.06122px 7.65306px 7.65306px rgba(0, 0, 0, 0.1), 0px 7.65306px 15.3061px 15.3061px rgba(0, 0, 0, 0.1)",
       },
@@ -87,5 +86,5 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/forms")],
 };
