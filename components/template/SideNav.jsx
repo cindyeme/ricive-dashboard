@@ -4,13 +4,22 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { RiHome6Line, RiCheckboxMultipleLine } from "react-icons/ri";
 import { HiOutlineChartBarSquare } from "react-icons/hi2";
-import { FiLayers, FiUsers, FiLifeBuoy, FiSettings } from "react-icons/fi";
+import {
+  FiLayers,
+  FiUsers,
+  FiLifeBuoy,
+  FiSettings,
+  FiLogOut,
+} from "react-icons/fi";
 import { BiPieChartAlt2 } from "react-icons/bi";
 import { GrClose } from "react-icons/gr";
+import { Scrollbars } from "react-custom-scrollbars";
 
 import SideNavLinkGroup from "./SideNavLinkGroup";
-import { Logo } from "../../public";
+import { Avatar1, Logo } from "../../public";
 import Search from "./Search";
+import { Line } from "../ui/progress";
+// import { ScrollBar } from "../ui/scrollbar";
 
 function SideNav({ sidebarOpen, setSidebarOpen }) {
   const { pathname } = useRouter();
@@ -74,14 +83,15 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
         className={`fixed inset-0 bg-slate-900 bg-opacity-30 z-40 lg:hidden lg:z-auto transition-opacity duration-200 ${
           sidebarOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
-        aria-hidden="true"
+        ariaHidden="true"
       ></div>
 
       {/* Sidebar */}
+      {/* <Scrollbars style={{ height:"100%" }} autoHide> */}
       <div
         id="sidebar"
         ref={sidebar}
-        className={`flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-screen overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-[280px] shrink-0 bg-white border-r p-4 transition-all duration-200 ease-in-out ${
+        className={`flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-screen overflow-y-scrol lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-[280px] shrink-0 bg-white border-r p-4 transition-all duration-200 ease-in-out ${
           sidebarOpen ? "translate-x-0" : "-translate-x-64"
         }`}
       >
@@ -418,7 +428,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
             <h3 className="text-xs uppercase text-slate-500 font-semibold pl-3">
               <span
                 className="hidden lg:block lg:sidebar-expanded:hidden 2xl:hidden text-center w-6"
-                aria-hidden="true"
+                ariaHidden="true"
               >
                 •••
               </span>
@@ -528,7 +538,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
 
               {/* Monthly Budget */}
               {budget && (
-                <li className="mt-4 bg-primary-50 p-4 rounded-[8px]">
+                <li className="mt-4 bg-primary-50 p-4 rounded-[8px] hidden lg:block">
                   <div className="flex flex-col space-y-4">
                     <div className="budget">
                       <div className="flex justify-between items-center">
@@ -547,17 +557,18 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                         You’re at 80% of your budget.
                       </p>
                     </div>
+                    <Line />
                     <div className="flex items-center space-x-4">
                       <button
                         type="button"
                         onClick={handleBudgetOpen}
-                        className="text-black-500 font-medium"
+                        className="text-black-500 font-medium text-[14px]"
                       >
                         Dismiss
                       </button>
                       <Link
                         href="/upgrade"
-                        className="text-primary-400 font-medium"
+                        className="text-primary-400 font-medium text-[14px]"
                       >
                         Upgrade plan
                       </Link>
@@ -565,6 +576,23 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                   </div>
                 </li>
               )}
+
+              <li className="mt-10 mb-5 border-t pt-6">
+                <div className="flex justify-between">
+                  <div className="flex space-x-4">
+                    <Image src={Avatar1} alt="Avatar" width={40} height={40} />
+                    <div className="flex flex-col space-y-1">
+                      <p className="text-black-500 font-medium text-sm">
+                        Karen Ijezie
+                      </p>
+                      <p className="text-black-500 text-sm">Karen@ricive.com</p>
+                    </div>
+                  </div>
+                  <button type="button">
+                    <FiLogOut size={20} />
+                  </button>
+                </div>
+              </li>
             </ul>
           </div>
         </div>
@@ -588,6 +616,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
           </div>
         </div>
       </div>
+      {/* </Scrollbars> */}
     </div>
   );
 }
