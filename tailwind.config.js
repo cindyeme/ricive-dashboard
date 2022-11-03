@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       colors: {
         success: "#12B76A",
+        error: "#F04438",
         white: "#ffffff",
         primary: {
           50: "#F9FAFB",
@@ -19,7 +20,7 @@ module.exports = {
           500: "#4E903C",
         },
         light: {
-          100: "#ECF0FD",
+          100: "#F9FAFB",
           200: "#DDD8FF",
           300: "#B3B3B4",
           400: "#8d8e8e",
@@ -49,6 +50,8 @@ module.exports = {
       },
       boxShadow: {
         "custom-1": "0px 1px 2px rgba(16, 24, 40, 0.05)",
+        "custom-2":
+          "0px 1px 3px rgba(16, 24, 40, 0.1), 0px 1px 2px rgba(16, 24, 40, 0.06)",
       },
     },
   },

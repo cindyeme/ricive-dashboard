@@ -5,5 +5,5 @@
   @apply border border-black-300 bg-white text-black-400 hover:bg-light-100;
 }
 .btn--primary{
-  @apply text-white bg-primary-400 hover:bg-primary-500;
+  @apply text-white !bg-primary-400 hover:bg-primary-500;
 }

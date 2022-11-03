@@ -1,13 +1,16 @@
-import { useState } from 'react';
-import DashboardCard01 from '../components/layout/DashboardCard01';
-import Header from '../components/template/Header';
+import { useState } from "react";
+import DashboardCard01 from "../components/layout/DashboardCard01";
+import DashboardCard02 from "../components/layout/DashboardCard02";
+import DashboardCard03 from "../components/layout/DashboardCard03";
+import Header from "../components/template/Header";
 
 import Seo from "../components/template/Seo";
-import SideNav from '../components/template/SideNav';
-import WelcomeBanner from '../components/template/WelcomeBanner';
+import SideNav from "../components/template/SideNav";
+import WelcomeBanner from "../components/template/WelcomeBanner";
 
 export default function Home() {
-const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState(2);
   return (
     <>
       <Seo
@@ -22,23 +25,67 @@ const [sidebarOpen, setSidebarOpen] = useState(false);
           {/* Content area */}
           <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden bg-black-100">
             {/*  Site header */}
-            {/* <Header sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} /> */}
 
             <main>
               <div className="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
                 {/* Welcome banner */}
                 <WelcomeBanner />
 
-               
+                {/* Tabs */}
+                <div className="border border-black-300 inline-flex rounded-[8px] flex text-black-600 mb-8">
+                  <button
+                    type="button"
+                    className={`${
+                      activeTab === 1 && "bg-light-100"
+                    } btn font-medium text-[14px] border-r !rounded-none pl-4`}
+                    onClick={() => setActiveTab(1)}
+                  >
+                    12 months
+                  </button>
+                  <button
+                    type="button"
+                    className={`${
+                      activeTab === 2 && "bg-light-100"
+                    } btn font-medium text-[14px] border-r !rounded-none`}
+                    onClick={() => setActiveTab(2)}
+                  >
+                    30 days
+                  </button>
+                  <button
+                    type="button"
+                    className={`${
+                      activeTab === 3 && "bg-light-100"
+                    } btn font-medium text-[14px] border-r !rounded-none`}
+                    onClick={() => setActiveTab(3)}
+                  >
+                    7 days
+                  </button>
+                  <button
+                    type="button"
+                    className={`${
+                      activeTab === 4 && "bg-light-100"
+                    } btn font-medium text-[14px] pr-4`}
+                    onClick={() => setActiveTab(4)}
+                  >
+                    24 hours
+                  </button>
+                </div>
 
                 {/* Cards */}
                 <div className="grid grid-cols-12 gap-6">
-                  {/* Line chart (Acme Plus) */}
-                  <DashboardCard01 />
+                  {activeTab === 2 && (
+                    <>
+                      {/* Line chart (Users) */}
+                      <DashboardCard01 />
+                      {/* Line chart (Sessions) */}
+                      <DashboardCard02 />
+                      {/* Line chart (Session duration) */}
+                      <DashboardCard03 />
+                    </>
+                  )}
                 </div>
               </div>
             </main>
-
           </div>
         </div>
       </div>

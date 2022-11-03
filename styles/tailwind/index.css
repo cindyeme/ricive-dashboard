@@ -9,31 +9,31 @@
     }
 
     h1, .h1 {
-        @apply text-4xl font-bold text-gray-600;
+        @apply text-4xl font-bold text-black-600;
     }
 
     h2, .h2 {
-        @apply text-3xl font-bold text-gray-600;
+        @apply text-3xl font-bold text-black-600;
     }
 
     h3, .h3 {
-        @apply text-2xl font-semibold text-gray-600;
+        @apply text-2xl font-semibold text-black-600;
     }
 
     h4, .h4 {
-        @apply text-xl font-semibold text-gray-600;
+        @apply text-xl font-semibold text-black-600;
     }
 
     h5, .h5 {
-        @apply text-lg font-semibold text-gray-600;
+        @apply text-lg font-semibold text-black-600;
     }
 
     h6, .h6 {
-        @apply text-base font-semibold text-gray-600;
+        @apply text-base font-semibold text-black-600;
     }
 
     hr {
-        @apply border-gray-200 dark:border-gray-600;
+        @apply border-gray-200;
     }
 
     .heading-text {

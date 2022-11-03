@@ -1,10 +1,10 @@
 import { FiDownloadCloud } from "react-icons/fi";
 import { DefaultButton, PrimaryButton } from "../ui/buttons";
-import Button from "../ui/buttons/Button";
+import { Tooltip } from "../ui/tooltip";
 
 function WelcomeBanner() {
   return (
-    <div className="relative mb-10">
+    <div className="relative mb-6">
       {/* Content */}
       <div className="relative">
         <div className="flex justify-between items-center mb-1.5">
@@ -15,7 +15,12 @@ function WelcomeBanner() {
             <DefaultButton text="Export">
               <FiDownloadCloud />
             </DefaultButton>
-            <PrimaryButton text="Insights" />
+            <Tooltip
+              placement="bottom"
+              title="Find your business insights here"
+            >
+              <PrimaryButton text="Insights" />
+            </Tooltip>
           </div>
         </div>
         <p>Measure your advertising ROI and track and report website traffic</p>
