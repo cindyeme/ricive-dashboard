@@ -42,7 +42,7 @@ function DashboardCard02() {
         fill: true,
         backgroundColor: `rgba(${hexToRGB(
           tailwindConfig().theme.colors.red[500]
-        )}, 0.08)`,
+        )}, 0.05)`,
         borderColor: tailwindConfig().theme.colors.red[500],
         borderWidth: 2,
         tension: 0.4,
