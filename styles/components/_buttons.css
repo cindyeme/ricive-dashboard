@@ -1,0 +1,9 @@
+.btn{
+  @apply text-center px-4 py-2 rounded-[8px] transition duration-300 ease-linear;
+}
+.btn--default{
+  @apply border border-black-300 bg-white text-black-400 hover:bg-light-100;
+}
+.btn--primary{
+  @apply text-white bg-primary-400 hover:bg-primary-500;
+}
