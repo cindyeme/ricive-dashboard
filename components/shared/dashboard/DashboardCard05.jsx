@@ -1,19 +1,18 @@
 import { useState } from "react";
 import Image from "next/image";
-import { FiDownloadCloud, FiEdit2 } from "react-icons/fi";
-import { DefaultButton } from "../../ui/buttons";
+import { FiEdit2 } from "react-icons/fi";
+import { DefaultButton, DownloadButtonWithTooltip } from "../../ui/buttons";
 import { AC, Figma, FV, Mastercard, Spotify, Stripe, TB, Visa } from "../../../public";
 
 function DashboardCard05() {
   const [activeTab, setActiveTab] = useState(1);
+  
   return (
     <div className="col-span-full xl:col-span-12 bg-white shadow-custom-2 rounded-[8px]">
       <header className="px-5 pt-4 pb-3 border-b border-slate-100 flex justify-between items-center">
         <h2 className="font-semibold text-slate-800">Recent transactions</h2>
         <div className="flex items-center space-x-3">
-          <DefaultButton text="Download">
-            <FiDownloadCloud />
-          </DefaultButton>
+          <DownloadButtonWithTooltip />
           <DefaultButton text="View report" />
         </div>
       </header>

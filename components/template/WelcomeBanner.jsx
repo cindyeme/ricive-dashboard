@@ -1,7 +1,7 @@
 import { FaArrowRight } from "react-icons/fa";
 import { FiDownloadCloud } from "react-icons/fi";
 import { usePopperTooltip } from "react-popper-tooltip";
-import { DefaultButton, PrimaryButton } from "../ui/buttons";
+import { DefaultButton } from "../ui/buttons";
 
 function WelcomeBanner() {
   const {
@@ -55,7 +55,7 @@ function WelcomeBanner() {
                     engagements increase.
                   </p>
                   <div className="flex items-end justify-end">
-                    <button className=" bg-white rounded px-2 py-1.5 text-black-500 text-xs mt-3 flex items-center space-x-1">
+                    <button className="cursor-pointer bg-white rounded px-2 py-1.5 text-black-500 text-xs mt-3 flex items-center space-x-1">
                       <span>Next</span>
                       <FaArrowRight size={8} />
                     </button>
