@@ -13,7 +13,7 @@ import {
 } from "react-icons/fi";
 import { BiPieChartAlt2 } from "react-icons/bi";
 import { GrClose } from "react-icons/gr";
-import { Scrollbars } from "react-custom-scrollbars";
+// import { Scrollbars } from "react-custom-scrollbars";
 
 import SideNavLinkGroup from "./SideNavLinkGroup";
 import { Avatar1, Logo } from "../../public";

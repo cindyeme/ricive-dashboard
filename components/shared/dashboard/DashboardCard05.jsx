@@ -2,52 +2,64 @@ import { useState } from "react";
 import Image from "next/image";
 import { FiEdit2 } from "react-icons/fi";
 import { DefaultButton, DownloadButtonWithTooltip } from "../../ui/buttons";
-import { AC, Figma, FV, Mastercard, Spotify, Stripe, TB, Visa } from "../../../public";
+import {
+  AC,
+  Figma,
+  FV,
+  Mastercard,
+  Spotify,
+  Stripe,
+  TB,
+  Visa,
+} from "../../../public";
+import Search from "../template/Search";
 
 function DashboardCard05() {
   const [activeTab, setActiveTab] = useState(1);
-  
+
   return (
     <div className="col-span-full xl:col-span-12 bg-white shadow-custom-2 rounded-[8px]">
       <header className="px-5 pt-4 pb-3 border-b border-slate-100 flex justify-between items-center">
-        <h2 className="font-semibold text-slate-800 h6">
-          Recent transactions
-        </h2>
+        <h2 className="font-semibold text-slate-800 h6">Recent transactions</h2>
         <div className="flex items-center space-x-3">
           <DownloadButtonWithTooltip />
           <DefaultButton text="View report" />
         </div>
       </header>
       <div className="p-3">
-        {/* Tabs */}
-        <div className="border border-black-300 inline-flex rounded-[8px] flex text-black-600 mb-7">
-          <button
-            type="button"
-            className={`${
-              activeTab === 1 && "bg-light-100"
-            } btn font-medium text-[14px] border-r !rounded-r-none pl-4`}
-            onClick={() => setActiveTab(1)}
-          >
-            View all
-          </button>
-          <button
-            type="button"
-            className={`${
-              activeTab === 2 && "bg-light-100"
-            } btn font-medium text-[14px] border-r !rounded-none`}
-            onClick={() => setActiveTab(2)}
-          >
-            Monitored
-          </button>
-          <button
-            type="button"
-            className={`${
-              activeTab === 2 && "bg-light-100"
-            } btn font-medium text-[14px] !rounded-none`}
-            onClick={() => setActiveTab(3)}
-          >
-            Unmonitored
-          </button>
+        <div className="flex justify-between items-center">
+          {/* Tabs */}
+          <div className="border border-black-300 inline-flex rounded-[8px] flex text-black-600 mb-7">
+            <button
+              type="button"
+              className={`${
+                activeTab === 1 && "bg-light-100"
+              } btn font-medium text-[14px] border-r !rounded-r-none pl-4`}
+              onClick={() => setActiveTab(1)}
+            >
+              View all
+            </button>
+            <button
+              type="button"
+              className={`${
+                activeTab === 2 && "bg-light-100"
+              } btn font-medium text-[14px] border-r !rounded-none`}
+              onClick={() => setActiveTab(2)}
+            >
+              Monitored
+            </button>
+            <button
+              type="button"
+              className={`${
+                activeTab === 2 && "bg-light-100"
+              } btn font-medium text-[14px] !rounded-none`}
+              onClick={() => setActiveTab(3)}
+            >
+              Unmonitored
+            </button>
+          </div>
+          {/* Search */}
+          <Search />
         </div>
         {/* Table */}
         <div className="overflow-x-auto">
@@ -71,7 +83,7 @@ function DashboardCard05() {
                   <div className="font-semibold text-left">Cards</div>
                 </th>
                 <th className="p-2">
-                  <div className="font-semibold text-left"></div>
+                  <div className="font-semibold text-left">Edit</div>
                 </th>
               </tr>
             </thead>
