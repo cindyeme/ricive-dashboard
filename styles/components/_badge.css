@@ -1,0 +1,9 @@
+.badge{
+  @apply inline-flex items-center space-x-1 text-xs bg-blue-400/20 py-0.5 px-1.5 rounded-[16px] text-blue-400;
+}
+.badge--sub{
+  @apply bg-blue-400/20 text-blue-400;
+}
+.badge--dot{
+  @apply bg-blue-400 w-[6px] h-[6px] rounded-full;
+}

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Image from 'next/image'
+import Image from "next/image";
 import { FiDownloadCloud, FiEdit2 } from "react-icons/fi";
 import { DefaultButton } from "../../ui/buttons";
 import { Spotify, Visa } from "../../../public";
@@ -92,7 +92,13 @@ function DashboardCard05() {
                   <div className="text-">Wed 1:00pm</div>
                 </td>
                 <td className="p-2">
-                  <div className="text-left">Subscription</div>
+                  <div className="text-left">
+                    <span className="badge badge--sub">
+                      <span className="badge--dot" />
+                      <span>Subscription</span>
+                      
+                    </span>
+                  </div>
                 </td>
                 <td className="p-2">
                   <div className="flex items-center space-x-4">
@@ -105,7 +111,9 @@ function DashboardCard05() {
                   </div>
                 </td>
                 <td className="p-2">
-                  <button type="button" className="text-left"><FiEdit2 size={18} /></button>
+                  <button type="button" className="text-left">
+                    <FiEdit2 size={18} />
+                  </button>
                 </td>
               </tr>
             </tbody>
