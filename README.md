@@ -2,9 +2,9 @@
 
 ## Getting Started
 
-First, clone repo by:
+First, clone repo, run:
 
-`https://github.com/cindyeme/ricive-dashboard.git`
+`git clone https://github.com/cindyeme/ricive-dashboard.git`
 
 Then run command to install dependencies:
 
