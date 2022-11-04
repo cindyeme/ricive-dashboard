@@ -82,7 +82,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
         className={`fixed inset-0 bg-slate-900 bg-opacity-30 z-40 lg:hidden lg:z-auto transition-opacity duration-200 ${
           sidebarOpen ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
-        ariaHidden="true"
+        aria-hidden="true"
       ></div>
 
       {/* Sidebar */}
@@ -90,11 +90,11 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
       <div
         id="sidebar"
         ref={sidebar}
-        className={`flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-screen overflow-y-scroll lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-[290px] shrink-0 bg-white px-4 transition-all duration-200 ease-in-out ${
+        className={`flex flex-col absolute z-40 left-0 top-0 lg:static lg:left-auto lg:top-auto lg:translate-x-0 h-screen overflow-y-scroll overflow-x-hidden lg:overflow-y-auto no-scrollbar w-64 lg:w-20 lg:sidebar-expanded:!w-64 2xl:!w-[290px] shrink-0 bg-white px-4 transition-all duration-200 ease-in-out ${
           sidebarOpen ? "translate-x-0" : "-translate-x-64"
         }`}
       >
-        <Scrollbars style={{ height: "100%" }} autoHide>
+        {/* <Scrollbars style={{ height: "100%" }} autoHide> */}
           {/* Sidebar header */}
           <div className="flex justify-between mt-4 mb-7 pr-3 sm:px-2">
             {/* Close button */}
@@ -429,7 +429,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
               <h3 className="text-xs uppercase text-slate-500 font-semibold pl-3">
                 <span
                   className="hidden lg:block lg:sidebar-expanded:hidden 2xl:hidden text-center w-6"
-                  ariaHidden="true"
+                  aria-hidden="true"
                 >
                   •••
                 </span>
@@ -623,7 +623,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
             </button>
           </div>
         </div> */}
-        </Scrollbars>
+        {/* </Scrollbars> */}
       </div>
     </div>
   );

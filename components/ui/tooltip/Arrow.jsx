@@ -6,7 +6,7 @@ import {
 } from "react-icons/bs";
 
 const Arrow = ({ placement, color, colorDark }) => {
-  const arrowDefaultClass = `absolute text-${color} dark:text-${colorDark}`;
+  const arrowDefaultClass = `absolute text-${color}`;
 
   const getArrow = () => {
     switch (placement) {
