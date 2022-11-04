@@ -1,5 +1,7 @@
 #  Ricive - Dashboard
 
+Live Demo: https://cynthia-ricive-dashboard.vercel.app/
+
 ## Getting Started
 
 First, clone repo, run:
