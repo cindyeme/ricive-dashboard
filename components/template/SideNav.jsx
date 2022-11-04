@@ -131,8 +131,8 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                 {(handleClick) => {
                   return (
                     <React.Fragment>
-                      <a
-                        href="#0"
+                      <Link
+                        href="/home"
                         className={`block truncate transition duration-150 ${
                           (pathname === "/home" || pathname.includes("home")) &&
                           "hover:text-slate-200"
@@ -165,7 +165,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </React.Fragment>
                   );
                 }}
@@ -179,8 +179,8 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                 {(handleClick) => {
                   return (
                     <React.Fragment>
-                      <a
-                        href="#0"
+                      <Link
+                        href="/dashboard"
                         className={`block truncate transition duration-150 ${
                           (pathname === "/" ||
                             pathname.includes("dashboard")) &&
@@ -214,7 +214,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </React.Fragment>
                   );
                 }}
@@ -228,8 +228,8 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                 {(handleClick) => {
                   return (
                     <React.Fragment>
-                      <a
-                        href="#0"
+                      <Link
+                        href="/projects"
                         className={`block truncate transition duration-150 ${
                           (pathname === "/projects" ||
                             pathname.includes("projects")) &&
@@ -263,7 +263,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </React.Fragment>
                   );
                 }}
@@ -277,8 +277,8 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                 {(handleClick) => {
                   return (
                     <React.Fragment>
-                      <a
-                        href="#0"
+                      <Link
+                        href="/tasks"
                         className={`block truncate transition duration-150 ${
                           (pathname === "/tasks" ||
                             pathname.includes("tasks")) &&
@@ -312,7 +312,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </React.Fragment>
                   );
                 }}
@@ -326,8 +326,8 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                 {(handleClick) => {
                   return (
                     <React.Fragment>
-                      <a
-                        href="#0"
+                      <Link
+                        href="/reporting"
                         className={`block truncate transition duration-150 ${
                           (pathname === "/reporting" ||
                             pathname.includes("reporting")) &&
@@ -361,7 +361,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </React.Fragment>
                   );
                 }}
@@ -375,8 +375,8 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                 {(handleClick) => {
                   return (
                     <React.Fragment>
-                      <a
-                        href="#0"
+                      <Link
+                        href="/users"
                         className={`block truncate transition duration-150 ${
                           (pathname === "/users" ||
                             pathname.includes("users")) &&
@@ -410,7 +410,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </React.Fragment>
                   );
                 }}
@@ -440,8 +440,8 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                 {(handleClick) => {
                   return (
                     <React.Fragment>
-                      <a
-                        href="#0"
+                      <Link
+                        href="/support"
                         className={`block truncate transition duration-150 ${
                           (pathname === "/support" ||
                             pathname.includes("support")) &&
@@ -475,7 +475,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </React.Fragment>
                   );
                 }}
@@ -489,8 +489,8 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                 {(handleClick) => {
                   return (
                     <React.Fragment>
-                      <a
-                        href="#0"
+                      <Link
+                        href="/settings"
                         className={`block truncate transition duration-150 ${
                           (pathname === "/settings" ||
                             pathname.includes("settings")) &&
@@ -524,7 +524,7 @@ function SideNav({ sidebarOpen, setSidebarOpen }) {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </Link>
                     </React.Fragment>
                   );
                 }}
