@@ -1,2 +1,10 @@
-export {default as Logo} from './assets/logo/Logo.svg'
-export {default as Avatar1} from './assets/avatar/avatar-1.svg'
+export { default as Logo } from "./assets/logo/Logo.svg";
+export { default as Avatar1 } from "./assets/avatar/avatar-1.svg";
+export { default as Spotify } from "./assets/icons/spotify.svg";
+export { default as AC } from "./assets/icons/ac.svg";
+export { default as Stripe } from "./assets/icons/stripe.svg";
+export { default as Figma } from "./assets/icons/figma.svg";
+export { default as TB } from "./assets/icons/tb.svg";
+export { default as FV } from "./assets/icons/fv.svg";
+export { default as Visa } from "./assets/icons/visa.svg";
+export { default as Mastercard } from "./assets/icons/mastercard.svg";

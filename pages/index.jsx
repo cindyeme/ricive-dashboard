@@ -3,6 +3,7 @@ import DashboardCard01 from "../components/shared/dashboard/DashboardCard01";
 import DashboardCard02 from "../components/shared/dashboard/DashboardCard02";
 import DashboardCard03 from "../components/shared/dashboard/DashboardCard03";
 import DashboardCard04 from "../components/shared/dashboard/DashboardCard04";
+import DashboardCard05 from "../components/shared/dashboard/DashboardCard05";
 import Header from "../components/template/Header";
 
 import Seo from "../components/template/Seo";
@@ -84,6 +85,8 @@ export default function Home() {
                   )}
                   {/* Line chart (Total balance) */}
                   <DashboardCard04 />
+                  {/* Line chart (Recent transactions) */}
+                  <DashboardCard05 />
                 </div>
               </div>
             </main>
