@@ -1,7 +1,8 @@
 import { useState } from "react";
-import DashboardCard01 from "../components/layout/DashboardCard01";
-import DashboardCard02 from "../components/layout/DashboardCard02";
-import DashboardCard03 from "../components/layout/DashboardCard03";
+import DashboardCard01 from "../components/shared/dashboard/DashboardCard01";
+import DashboardCard02 from "../components/shared/dashboard/DashboardCard02";
+import DashboardCard03 from "../components/shared/dashboard/DashboardCard03";
+import DashboardCard04 from "../components/shared/dashboard/DashboardCard04";
 import Header from "../components/template/Header";
 
 import Seo from "../components/template/Seo";
@@ -24,8 +25,6 @@ export default function Home() {
 
           {/* Content area */}
           <div className="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden bg-black-100">
-            {/*  Site header */}
-
             <main>
               <div className="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
                 {/* Welcome banner */}
@@ -83,6 +82,8 @@ export default function Home() {
                       <DashboardCard03 />
                     </>
                   )}
+                  {/* Line chart (Total balance) */}
+                  <DashboardCard04 />
                 </div>
               </div>
             </main>

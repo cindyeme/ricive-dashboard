@@ -1,11 +1,11 @@
 import React from "react";
-import LineChart from "../shared/charts/LineChart01";
+import LineChart from "../charts/LineChart01";
 
 // Import utilities
-import { tailwindConfig, hexToRGB } from "../utils/Utils";
-import CardLayout from "./CardLayout";
+import { tailwindConfig, hexToRGB } from "../../utils/Utils";
+import CardLayout from "../../layout/CardLayout";
 
-function DashboardCard01() {
+function DashboardCard03() {
   const chartData = {
     labels: [
       "12-01-2020",
@@ -55,10 +55,10 @@ function DashboardCard01() {
   };
 
   return (
-    <CardLayout title="Users" value="20.8k" percentage={12}>
+    <CardLayout title="Session duration" value="3m 52s" percentage={2}>
       <LineChart data={chartData} width="100%" height={128} />
     </CardLayout>
   );
 }
 
-export default DashboardCard01;
+export default DashboardCard03;
