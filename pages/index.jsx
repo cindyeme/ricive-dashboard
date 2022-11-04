@@ -4,7 +4,6 @@ import DashboardCard02 from "../components/shared/dashboard/DashboardCard02";
 import DashboardCard03 from "../components/shared/dashboard/DashboardCard03";
 import DashboardCard04 from "../components/shared/dashboard/DashboardCard04";
 import DashboardCard05 from "../components/shared/dashboard/DashboardCard05";
-import Header from "../components/template/Header";
 
 import Seo from "../components/template/Seo";
 import SideNav from "../components/template/SideNav";
@@ -17,7 +16,7 @@ export default function Home() {
     <>
       <Seo
         pageTitle="Ricive | Home"
-        metaDescriptionContent="This is a test for the role of a Frontend Engineer at Ricive"
+        metaDescriptionContent="This is a technical test for the role of a Frontend Engineer at Ricive"
       />
       <div className="home">
         <div className="flex h-screen overflow-hidden">

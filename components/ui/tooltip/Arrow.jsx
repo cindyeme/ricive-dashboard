@@ -5,7 +5,7 @@ import {
   BsFillCaretRightFill,
 } from "react-icons/bs";
 
-const Arrow = ({ placement, color, colorDark }) => {
+const Arrow = ({ placement, color }) => {
   const arrowDefaultClass = `absolute text-${color}`;
 
   const getArrow = () => {

@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { FaArrowUp, FaArrowDown } from "react-icons/fa";
-import LineChart from "../shared/charts/LineChart01";
+
 import EditMenu from "../template/EditMenu";
 
 const CardLayout = (props) => {
