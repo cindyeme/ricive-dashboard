@@ -75,7 +75,7 @@ function DashboardCard04() {
   return (
     <div className="flex flex-col col-span-full sm:col-span-12 bg-white shadow-custom-2 rounded-[8px]">
       <header className="px-5 pt-4 flex items-center justify-between">
-        <h2 className="font-semibold text-slate-800">Total balance</h2>
+        <h2 className="font-semibold text-slate-800 h6">Total balance</h2>
         <DefaultButton text="View report" />
       </header>
       {/* Chart built with Chart.js 3 */}

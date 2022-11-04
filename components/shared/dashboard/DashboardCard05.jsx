@@ -10,7 +10,9 @@ function DashboardCard05() {
   return (
     <div className="col-span-full xl:col-span-12 bg-white shadow-custom-2 rounded-[8px]">
       <header className="px-5 pt-4 pb-3 border-b border-slate-100 flex justify-between items-center">
-        <h2 className="font-semibold text-slate-800">Recent transactions</h2>
+        <h2 className="font-semibold text-slate-800 h6">
+          Recent transactions
+        </h2>
         <div className="flex items-center space-x-3">
           <DownloadButtonWithTooltip />
           <DefaultButton text="View report" />
