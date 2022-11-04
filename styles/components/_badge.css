@@ -3,7 +3,23 @@
 }
 .badge--sub{
   @apply bg-blue-400/20 text-blue-400;
-}
-.badge--dot{
+}.badge--sub_dot{
   @apply bg-blue-400 w-[6px] h-[6px] rounded-full;
+}
+
+.badge--food{
+  @apply bg-pink-400/20 text-pink-400;
+}.badge--food_dot{
+  @apply bg-pink-400 w-[6px] h-[6px] rounded-full;
+}
+.amt--high{
+  @apply text-primary-400;
+}
+.badge--income{
+  @apply bg-green-400/20 text-green-400;
+}.badge--income_dot{
+  @apply bg-green-400 w-[6px] h-[6px] rounded-full;
+}
+.clr--gray{
+  @apply text-black-400 text-left;
 }

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { FiDownloadCloud, FiEdit2 } from "react-icons/fi";
 import { DefaultButton } from "../../ui/buttons";
-import { Spotify, Visa } from "../../../public";
+import { AC, Figma, FV, Mastercard, Spotify, Stripe, TB, Visa } from "../../../public";
 
 function DashboardCard05() {
   const [activeTab, setActiveTab] = useState(1);
@@ -86,17 +86,16 @@ function DashboardCard05() {
                   </div>
                 </td>
                 <td className="p-2">
-                  <div className="text-left">$-18.99</div>
+                  <div className="clr--gray">$-18.99</div>
                 </td>
                 <td className="p-2">
-                  <div className="text-">Wed 1:00pm</div>
+                  <div className="clr--gray">Wed 1:00pm</div>
                 </td>
                 <td className="p-2">
                   <div className="text-left">
                     <span className="badge badge--sub">
-                      <span className="badge--dot" />
+                      <span className="badge--sub_dot" />
                       <span>Subscription</span>
-                      
                     </span>
                   </div>
                 </td>
@@ -106,6 +105,250 @@ function DashboardCard05() {
                     <Image src={Visa} alt="Visa" width={46} height={32} />
                     <div className="flex flex-col space-y-1.5 items-start">
                       <p className="text-sm text-black-500">Visa 123</p>
+                      <p className="text-xs text-black-400">Expiry 06/2024</p>
+                    </div>
+                  </div>
+                </td>
+                <td className="p-2">
+                  <button type="button" className="text-left">
+                    <FiEdit2 size={18} />
+                  </button>
+                </td>
+              </tr>
+              {/* Row */}
+              <tr>
+                <td className="p-2">
+                  <div className="flex space-x-3 items-center">
+                    {/* icon */}
+                    <Image src={AC} alt="AC" width={40} height={40} />
+                    <div className="text-black-800">A Coffee</div>
+                  </div>
+                </td>
+                <td className="p-2">
+                  <div className="clr--gray">$-4.50</div>
+                </td>
+                <td className="p-2">
+                  <div className="clr--gray">Wed 7:20am</div>
+                </td>
+                <td className="p-2">
+                  <div className="text-left">
+                    <span className="badge badge--food">
+                      <span className="badge--food_dot" />
+                      <span>Food and dining</span>
+                    </span>
+                  </div>
+                </td>
+                <td className="p-2">
+                  <div className="flex items-center space-x-4">
+                    {/* visa */}
+                    <Image src={Visa} alt="Visa" width={46} height={32} />
+                    <div className="flex flex-col space-y-1.5 items-start">
+                      <p className="text-sm text-black-500">Visa 123</p>
+                      <p className="text-xs text-black-400">Expiry 06/2024</p>
+                    </div>
+                  </div>
+                </td>
+                <td className="p-2">
+                  <button type="button" className="text-left">
+                    <FiEdit2 size={18} />
+                  </button>
+                </td>
+              </tr>
+              {/* Row */}
+              <tr>
+                <td className="p-2">
+                  <div className="flex space-x-3 items-center">
+                    {/* icon */}
+                    <Image src={Stripe} alt="Stripe" width={40} height={40} />
+                    <div className="text-black-800">Stripe</div>
+                  </div>
+                </td>
+                <td className="p-2">
+                  <div className="text-left amt--high">$+88.00</div>
+                </td>
+                <td className="p-2">
+                  <div className="clr--gray">Wed 2:24am</div>
+                </td>
+                <td className="p-2">
+                  <div className="text-left">
+                    <span className="badge badge--income">
+                      <span className="badge--income_dot" />
+                      <span>Income</span>
+                    </span>
+                  </div>
+                </td>
+                <td className="p-2">
+                  <div className="flex items-center space-x-4">
+                    {/* Mastercard */}
+                    <Image
+                      src={Mastercard}
+                      alt="Mastercard"
+                      width={46}
+                      height={32}
+                    />
+                    <div className="flex flex-col space-y-1.5 items-start">
+                      <p className="text-sm text-black-500">Mastercard 123</p>
+                      <p className="text-xs text-black-400">Expiry 06/2024</p>
+                    </div>
+                  </div>
+                </td>
+                <td className="p-2">
+                  <button type="button" className="text-left">
+                    <FiEdit2 size={18} />
+                  </button>
+                </td>
+              </tr>
+              {/* Row */}
+              <tr>
+                <td className="p-2">
+                  <div className="flex space-x-3 items-center">
+                    {/* icon */}
+                    <Image src={Figma} alt="Figma" width={40} height={40} />
+                    <div className="text-black-800">Figma</div>
+                  </div>
+                </td>
+                <td className="p-2">
+                  <div className="clr--gray">$-15.00</div>
+                </td>
+                <td className="p-2">
+                  <div className="clr--gray">Tue 6:10pm</div>
+                </td>
+                <td className="p-2">
+                  <div className="text-left">
+                    <span className="badge badge--sub">
+                      <span className="badge--sub_dot" />
+                      <span>Subscriptions</span>
+                    </span>
+                  </div>
+                </td>
+                <td className="p-2">
+                  <div className="flex items-center space-x-4">
+                    {/* Visa */}
+                    <Image src={Visa} alt="Visa" width={46} height={32} />
+                    <div className="flex flex-col space-y-1.5 items-start">
+                      <p className="text-sm text-black-500">Visa 123</p>
+                      <p className="text-xs text-black-400">Expiry 06/2024</p>
+                    </div>
+                  </div>
+                </td>
+                <td className="p-2">
+                  <button type="button" className="text-left">
+                    <FiEdit2 size={18} />
+                  </button>
+                </td>
+              </tr>
+              {/* Row */}
+              <tr>
+                <td className="p-2">
+                  <div className="flex space-x-3 items-center">
+                    {/* icon */}
+                    <Image src={TB} alt="TB" width={40} height={40} />
+                    <div className="text-black-800">FBF Bakery</div>
+                  </div>
+                </td>
+                <td className="p-2">
+                  <div className="clr--gray">$-12.50</div>
+                </td>
+                <td className="p-2">
+                  <div className="clr--gray">Tue 6:10pm</div>
+                </td>
+                <td className="p-2">
+                  <div className="text-left">
+                    <span className="badge badge--food">
+                      <span className="badge--food_dot" />
+                      <span>Food and dining</span>
+                    </span>
+                  </div>
+                </td>
+                <td className="p-2">
+                  <div className="flex items-center space-x-4">
+                    {/* Visa */}
+                    <Image src={Visa} alt="Visa" width={46} height={32} />
+                    <div className="flex flex-col space-y-1.5 items-start">
+                      <p className="text-sm text-black-500">Visa 123</p>
+                      <p className="text-xs text-black-400">Expiry 06/2024</p>
+                    </div>
+                  </div>
+                </td>
+                <td className="p-2">
+                  <button type="button" className="text-left">
+                    <FiEdit2 size={18} />
+                  </button>
+                </td>
+              </tr>
+              {/* Row */}
+              <tr>
+                <td className="p-2">
+                  <div className="flex space-x-3 items-center">
+                    {/* icon */}
+                    <Image src={FV} alt="FV" width={40} height={40} />
+                    <div className="text-black-800">Fresh F&V</div>
+                  </div>
+                </td>
+                <td className="p-2">
+                  <div className="clr--gray">$-40.20</div>
+                </td>
+                <td className="p-2">
+                  <div className="clr--gray">Tue 12:15pm</div>
+                </td>
+                <td className="p-2">
+                  <div className="text-left">
+                    <span className="badge badge--sub">
+                      <span className="badge--sub_dot" />
+                      <span>Groceries</span>
+                    </span>
+                  </div>
+                </td>
+                <td className="p-2">
+                  <div className="flex items-center space-x-4">
+                    {/* Visa */}
+                    <Image src={Visa} alt="Visa" width={46} height={32} />
+                    <div className="flex flex-col space-y-1.5 items-start">
+                      <p className="text-sm text-black-500">Visa 123</p>
+                      <p className="text-xs text-black-400">Expiry 06/2024</p>
+                    </div>
+                  </div>
+                </td>
+                <td className="p-2">
+                  <button type="button" className="text-left">
+                    <FiEdit2 size={18} />
+                  </button>
+                </td>
+              </tr>
+              {/* Row */}
+              <tr>
+                <td className="p-2">
+                  <div className="flex space-x-3 items-center">
+                    {/* icon */}
+                    <Image src={Stripe} alt="Stripe" width={40} height={40} />
+                    <div className="text-black-800">Stripe</div>
+                  </div>
+                </td>
+                <td className="p-2">
+                  <div className="text-left amt--high">$+88.00</div>
+                </td>
+                <td className="p-2">
+                  <div className="clr--gray">Tue 5:40am</div>
+                </td>
+                <td className="p-2">
+                  <div className="text-left">
+                    <span className="badge badge--income">
+                      <span className="badge--income_dot" />
+                      <span>Income</span>
+                    </span>
+                  </div>
+                </td>
+                <td className="p-2">
+                  <div className="flex items-center space-x-4">
+                    {/* Mastercard */}
+                    <Image
+                      src={Mastercard}
+                      alt="Mastercard"
+                      width={46}
+                      height={32}
+                    />
+                    <div className="flex flex-col space-y-1.5 items-start">
+                      <p className="text-sm text-black-500">Mastercard 123</p>
                       <p className="text-xs text-black-400">Expiry 06/2024</p>
                     </div>
                   </div>
